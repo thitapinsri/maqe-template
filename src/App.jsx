@@ -11,20 +11,20 @@ const App = () => {
 
   //  get authors
   const getAuthors = async () => {
-    const response = await fetch(authorsLink)
-    const data = await response.json()
+    // const response = await fetch(authorsLink)
+    // const data = await response.json()
     // console.log(data)
-    // const response = await axios.get(authorsLink)
-    setAuthors(data)
+    const response = await axios.get(authorsLink)
+    setAuthors(response.data)
   };
 
   //  get posts
   const getPosts = async () => {
-    const response = await fetch(postsLink)
-    const data = await response.json()
+    // const response = await fetch(postsLink)
+    // const data = await response.json()
     // console.log(data)
-    // const response = await axios.get(postsLink)
-    setPosts(data)
+    const response = await axios.get(postsLink)
+    setPosts(response.data)
   };
 
   useEffect(() => {
